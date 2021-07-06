@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>Weather Dashborad</header>
+    <main class="container">
+      
+      <section class="seacharea">
+        <h2 class="search-heading">Search For City:</h2>
+        <form action="">
+          <input id="input" type="text" placeholder="New Haven" /><br />
+          <button id="search-btn">Search</button>
+        </form>
+        <hr />
+        
+        <div class="history">
+          <p id="hs-dsp" class="dsp"></p>
+        </div>
+      </section>
+
+      
+      <section class="main-display">
+        <div class="datadisplay">
+          <span>
+            <h2 id="display-heading"></h2>
+          </span>
+          <p id="main-date"></p>
+          <p id="main-temp"></p>
+          <p id="main-wind"></p>
+          <p id="main-humid"></p>
+          <span
+            >UV Index:
+            <p id="main-uv"></p>
+          </span>
+        </div>
+        <h2>5 - Day Forecast:</h2>
+        
+        <div class="forecast">
+          
+        </div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
