@@ -167,3 +167,25 @@ var getResults = function () {
     }
   };
   loadData();
+
+  // Code to search base on history
+hsDsp.addEventListener("click", function () {
+    newVal = oldData[0].text;
+    fetch(apiBase + newVal + apiKey)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        //  console.log(data);
+        mainTempEl.textContent = "Temp: " + data.main.temp + "° F";
+        mainWindEl.textContent = "Wind: " + data.wind.speed + " MPH";
+        mainHumid.textContent = "Humidity: " + data.main.humidity + "%";
+        displayHeading.textContent = data.name;
+        var disIcon = document.createElement("img");
+        disIcon.setAttribute(
+          "src",
+          "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"
+        );
+        displayHeading.append(disIcon);
+      });
+  });
